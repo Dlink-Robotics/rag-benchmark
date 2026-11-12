@@ -1,0 +1,37 @@
+name: CI
+description: Change CI or automation workflows
+title: "ci: "
+labels: ["ci"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the [issue title convention](https://github.com/Dlink-Robotics/rag-benchmark/blob/main/docs/issue-title-convention.md).
+        Keep the `ci:` prefix and complete the short description.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What CI or automation change is needed?
+      placeholder: Add automated test workflow
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Workflows, triggers, jobs, or checks involved
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true

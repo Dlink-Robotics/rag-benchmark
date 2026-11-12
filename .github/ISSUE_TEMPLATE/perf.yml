@@ -1,0 +1,45 @@
+name: Performance
+description: Propose a performance improvement
+title: "perf: "
+labels: ["perf"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the [issue title convention](https://github.com/Dlink-Robotics/rag-benchmark/blob/main/docs/issue-title-convention.md).
+        Keep the `perf:` prefix and complete the short description.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should be faster or lighter?
+      placeholder: Optimize vector search
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: Measured latency, memory, or throughput if available
+    validations:
+      required: false
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Target improvement and how it will be measured
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true

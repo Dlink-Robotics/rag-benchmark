@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Issue title convention
+    url: https://github.com/Dlink-Robotics/rag-benchmark/blob/main/docs/issue-title-convention.md
+    about: Read the title format before opening an issue
