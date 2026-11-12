@@ -36,3 +36,29 @@ body:
         - [ ] Criterion 2
     validations:
       required: true
+
+  - type: dropdown
+    id: roadmap-step
+    attributes:
+      label: Roadmap step
+      description: Optional. The benchmark step this belongs to, numbered as in the README. Also add the matching step label.
+      options:
+        - "0 Goal and bar"
+        - "1 Test material"
+        - "2 System under test and baseline"
+        - "3 Run and record"
+        - "4 Score each stage"
+        - "5 Isolate the faulty stage"
+        - "6 Trust the measurement"
+        - "7 Experiments and decision"
+        - "8 Speed, fit on the target device, report"
+    validations:
+      required: false
+
+  - type: input
+    id: blocked-by
+    attributes:
+      label: Blocked by
+      description: Optional. An issue number or an open decision. If filled in, also add the blocked label.
+    validations:
+      required: false

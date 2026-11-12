@@ -198,15 +198,11 @@ An issue describes one piece of work before it starts. Writing it first forces a
 
 - **One issue per roadmap step or sub-step.** If an issue covers more, split it.
 - **Title format `<type>: <short description>`.** The `type` is lowercase and one of `feat` (new feature or capability), `fix` (bug fix), `docs` (documentation), `test` (adding or updating tests), `perf` (performance improvement) or `ci` (automation workflows). Put one space after the colon. Write the description in English, in the imperative, with no full stop, and keep the whole title around 72 characters or fewer. Good: `fix: correct recall at k calculation`. Too vague: `fix: bug`. Pull requests and commits use the same format.
-- **Sections.** The issue form asks for them:
-  - **Goal and why:** what should exist afterwards, and why it is needed.
-  - **Done when:** a statement someone else can check. "The script exits with an error if any answer text is not at its labelled position" is checkable. "The script works well" is not.
-  - **Out of scope:** what this issue does not cover. This stops the work from growing.
-  - **Size:** half a day, 1 day, 2 days. If it is more than 2 days, split it.
+- **Sections.** Each form asks for a summary and a way to tell when the work is done: acceptance criteria, or the expected and actual behaviour for a `fix`. Two optional fields help planning: **Roadmap step** and **Blocked by**. Write "done" as a statement someone else can check. "The script exits with an error if any answer text is not at its labelled position" is checkable. "The script works well" is not. If the work is more than about 2 days, split the issue.
 - **Assign yourself when you start.** An assigned issue means "someone is working on this".
 - **Mark it blocked when it is.** Add the `blocked` label and write what it is blocked by, for example another issue number or an open decision in [docs/roadmap.md](docs/roadmap.md).
 
-Open a new issue with the "New issue" button and choose the form that matches your title type. There is one for each of `feat`, `fix`, `docs`, `test`, `perf` and `ci`, and there is also a general `task` form and a `bug` form.
+Open a new issue with the "New issue" button and choose the form that matches your title type. There is one for each of `feat`, `fix`, `docs`, `test`, `perf` and `ci`.
 
 ## 8. Labels
 
@@ -214,8 +210,6 @@ A label is a small tag on an issue or pull request. Labels make the list easy to
 
 | Label | Kind | Meaning |
 |---|---|---|
-| `task` | type | A planned piece of work on the benchmark |
-| `bug` | type | Something that is there but behaves wrongly |
 | `question` | type | An answer is needed before work can continue |
 | `feat`, `fix`, `docs`, `test`, `perf`, `ci` | type | The type of change, matching the prefix of the title |
 | `blocked` | status | Work cannot go on until something else is done. Say what |
