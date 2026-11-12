@@ -169,6 +169,7 @@ Everyone reviews everyone. Review is not a test of the author. It is a second pa
 
 ### When you are the author
 
+- **You cannot approve your own pull request.** Open it, ask a teammate to review, and wait. GitHub does not count the author's approval, and the rule on `main` needs 1 approval from someone else. Pushing a commit to a teammate's branch and then approving it does not work either, because the person who pushed last cannot be the approver.
 - **Reply to every comment**, even if only with "Done" or "I left it, because ...".
 - **Push fixes as new commits** on the same branch.
 - **Resolve each conversation** once it is settled, using the "Resolve conversation" button. GitHub will not merge while any conversation is open.
@@ -234,7 +235,7 @@ Some rules are not left to memory. GitHub applies them automatically, and nobody
 **On `main`:**
 
 - Changes arrive only through a pull request.
-- The pull request needs 1 approval from someone other than the author.
+- The pull request needs 1 approval from someone other than the author. You cannot approve your own pull request.
 - The person who pushed last cannot be the approver.
 - A new push dismisses earlier approvals.
 - All review conversations must be resolved before merging.
