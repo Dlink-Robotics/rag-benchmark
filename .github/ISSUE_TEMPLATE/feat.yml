@@ -1,0 +1,38 @@
+name: Feature
+description: Propose a new feature or capability
+title: "feat: "
+labels: ["feat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the [issue title convention](https://github.com/Dlink-Robotics/rag-benchmark/blob/main/docs/issue-title-convention.md).
+        Keep the `feat:` prefix and complete the short description.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should be added?
+      placeholder: Add support for a new embedding model
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this needed for the benchmark?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this is done?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
