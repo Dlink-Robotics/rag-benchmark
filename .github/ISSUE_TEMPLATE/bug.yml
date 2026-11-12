@@ -1,0 +1,39 @@
+name: Bug
+description: Something that is there but behaves wrongly.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: what-you-expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: how-to-reproduce
+    attributes:
+      label: How to reproduce
+      description: The exact commands or actions, in order.
+    validations:
+      required: true
+  - type: textarea
+    id: machine-and-versions
+    attributes:
+      label: Machine and versions
+      description: Operating system, model names and exact versions.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or output
+      description: Optional. Remove keys, personal data and machine paths before pasting.
+      render: shell
+    validations:
+      required: false
