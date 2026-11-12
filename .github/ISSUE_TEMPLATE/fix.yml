@@ -1,0 +1,57 @@
+name: Bug
+description: Report a bug or incorrect behavior
+title: "fix: "
+labels: ["fix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the [issue title convention](https://github.com/Dlink-Robotics/rag-benchmark/blob/main/docs/issue-title-convention.md).
+        Keep the `fix:` prefix and complete the short description.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong?
+      placeholder: Recall at k is calculated incorrectly
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps that trigger the bug
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, model, or other relevant details
+      placeholder: |
+        - OS:
+        - Python:
+        - Relevant config:
+    validations:
+      required: false

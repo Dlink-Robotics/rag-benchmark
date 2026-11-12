@@ -1,0 +1,36 @@
+name: Documentation
+description: Suggest or track a documentation change
+title: "docs: "
+labels: ["docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the [issue title convention](https://github.com/Dlink-Robotics/rag-benchmark/blob/main/docs/issue-title-convention.md).
+        Keep the `docs:` prefix and complete the short description.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What documentation should change?
+      placeholder: Add a benchmark setup guide
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which files or sections are affected?
+      placeholder: README.md, docs/...
+    validations:
+      required: false
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should be added, corrected, or removed?
+    validations:
+      required: true
