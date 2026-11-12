@@ -6,6 +6,8 @@
 
 ## Related issue
 
+<!-- Write `Closes #N`, `Related to #N`, or `No issue: <reason>`. -->
+
 Closes #
 
 ## Roadmap step
