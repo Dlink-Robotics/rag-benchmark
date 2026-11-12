@@ -1,8 +1,13 @@
 name: Bug
 description: Something that is there but behaves wrongly.
-title: "[bug] "
+title: "fix: "
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Title format: `<type>: <short description>`. Types: `feat`, `fix`, `docs`, `test`, `perf`, `ci`.
+        Example: `fix: correct recall at k calculation`. See issue #1 and CONTRIBUTING.md, section 7.
   - type: textarea
     id: what-happened
     attributes:

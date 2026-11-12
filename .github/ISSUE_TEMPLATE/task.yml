@@ -1,8 +1,13 @@
 name: Task
 description: A planned piece of work on one roadmap step or sub-step.
-title: "[task] "
+title: "feat: "
 labels: ["task"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Title format: `<type>: <short description>`. Types: `feat`, `fix`, `docs`, `test`, `perf`, `ci`.
+        Example: `fix: correct recall at k calculation`. See issue #1 and CONTRIBUTING.md, section 7.
   - type: dropdown
     id: roadmap-step
     attributes:

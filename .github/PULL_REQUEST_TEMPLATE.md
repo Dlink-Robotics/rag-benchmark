@@ -1,4 +1,4 @@
-<!-- The title becomes the commit subject on main: short, imperative, under 72 characters. -->
+<!-- The title becomes the commit subject on main: `<type>: <short description>`, under 72 characters. Types: feat, fix, docs, test, perf, ci. -->
 
 ## What this changes and why
 

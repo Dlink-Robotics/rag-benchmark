@@ -113,21 +113,21 @@ Branches are short-lived. A branch should live for days, not weeks. It is delete
 
 A commit message has a subject line and, when needed, a body.
 
-- **Subject:** short, under 72 characters, written in the imperative. The imperative is the form you use to give an order: "Add", "Fix", "Remove". A test: the subject should complete the sentence "If applied, this commit will ...".
+- **Subject:** `<type>: <short description>`, under 72 characters. The `type` is one of `feat`, `fix`, `docs`, `test`, `perf`, `ci`, the same list as for issue titles (see [section 7](#7-issues)). The description is lowercase English in the imperative, the form you use to give an order: "add", "fix", "remove". A test: the subject should complete the sentence "If applied, this commit will ...". No full stop at the end.
 - **Body:** leave one blank line after the subject, then explain WHY the change is made when that is not obvious. The diff already shows what changed. It cannot show the reason.
 - **One logical change per commit.** Do not mix a bug fix with a rename.
 
 | Good subject | Bad subject | What is wrong with the bad one |
 |---|---|---|
-| `Add checksum file for the Japanese documents` | `update` | Says nothing about what changed |
-| `Fix per-stage timer to report milliseconds` | `fixed stuff` | Not specific, not imperative |
-| `Record chunk rank and score for each question` | `WIP` | Describes your state, not the change |
-| `Pin the embedding model to an exact version` | `Changes after review and also some cleanup and a new script` | Several changes in one commit |
+| `docs: add checksum file for the Japanese documents` | `update` | Says nothing about what changed, no type |
+| `fix: report per-stage timer in milliseconds` | `fixed stuff` | Not specific, not imperative |
+| `feat: record chunk rank and score for each question` | `WIP` | Describes your state, not the change |
+| `feat: pin the embedding model to an exact version` | `Changes after review and also some cleanup and a new script` | Several changes in one commit, no type |
 
 An example with a body:
 
 ```text
-Pin the embedding model to an exact version
+feat: pin the embedding model to an exact version
 
 A rolling alias can change the model without notice. Results from
 two runs would then not be comparable.
@@ -187,7 +187,7 @@ Disagreement is normal and useful. Keep it about the change, not the person. Dec
 An issue describes one piece of work before it starts. Writing it first forces a clear goal, and gives the reviewer something to check against.
 
 - **One issue per roadmap step or sub-step.** If an issue covers more, split it.
-- **Verb-first title.** "Write the label check script", not "Label check".
+- **Title format `<type>: <short description>`.** The `type` is lowercase and one of `feat` (new feature or capability), `fix` (bug fix), `docs` (documentation), `test` (adding or updating tests), `perf` (performance improvement) or `ci` (automation workflows). Put one space after the colon. Write the description in English, in the imperative, with no full stop, and keep the whole title around 72 characters or fewer. Good: `fix: correct recall at k calculation`. Too vague: `fix: bug`. Pull requests and commits use the same format.
 - **Sections.** The issue form asks for them:
   - **Goal and why:** what should exist afterwards, and why it is needed.
   - **Done when:** a statement someone else can check. "The script exits with an error if any answer text is not at its labelled position" is checkable. "The script works well" is not.
