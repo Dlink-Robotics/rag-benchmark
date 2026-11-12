@@ -1,0 +1,67 @@
+name: Task
+description: A planned piece of work on one roadmap step or sub-step.
+title: "feat: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title format: `<type>: <short description>`. Types: `feat`, `fix`, `docs`, `test`, `perf`, `ci`.
+        Example: `fix: correct recall at k calculation`. See issue #1 and CONTRIBUTING.md, section 7.
+  - type: dropdown
+    id: roadmap-step
+    attributes:
+      label: Roadmap step
+      description: The step this task belongs to, numbered as in the README.
+      options:
+        - "0 Goal and bar"
+        - "1 Test material"
+        - "2 System under test and baseline"
+        - "3 Run and record"
+        - "4 Score each stage"
+        - "5 Isolate the faulty stage"
+        - "6 Trust the measurement"
+        - "7 Experiments and decision"
+        - "8 Speed, fit on the target device, report"
+    validations:
+      required: true
+  - type: textarea
+    id: goal-and-why
+    attributes:
+      label: Goal and why
+      description: What should exist afterwards, and why it is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      description: A checkable statement. Someone else must be able to say yes or no to it.
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this task does not cover.
+    validations:
+      required: false
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      description: Your best estimate of the work.
+      options:
+        - "half day"
+        - "1 day"
+        - "2 days"
+        - "more than 2 days - split it"
+    validations:
+      required: true
+  - type: input
+    id: blocked-by
+    attributes:
+      label: Blocked by
+      description: Optional. An issue number or an open decision. If filled in, also add the blocked label.
+    validations:
+      required: false
