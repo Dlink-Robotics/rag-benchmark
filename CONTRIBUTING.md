@@ -155,7 +155,7 @@ The title of the pull request becomes the subject of the single commit on `main`
 
 ## 6. Reviews
 
-Everyone reviews everyone. Review is not a test of the author. It is a second pair of eyes on the change, and it is how all three of us stay informed about the whole project.
+Everyone reviews everyone. Review is not a test of the author. It is a second pair of eyes on the change, and it is how everyone on the project stays informed about the whole project.
 
 ### When you are the reviewer
 
@@ -187,6 +187,15 @@ Disagreement is normal and useful. Keep it about the change, not the person. Dec
 
 An issue describes one piece of work before it starts. Writing it first forces a clear goal, and gives the reviewer something to check against.
 
+**When you need an issue**
+
+- **Required before work starts:** the change belongs to a roadmap step, changes code behaviour, a measured result or the test data, or needs agreement first.
+- **Optional:** a bug fix under about 50 lines. The pull request description is the record.
+- **Not needed:** typos, wording, comments and broken links.
+- **No issue:** write `No issue: <reason>` in place of `Closes #` in the pull request.
+- **Changes to this guide or to repository rules** need no issue, but ask everyone to review the pull request.
+- **A reviewer may ask for an issue** if a pull request turns out larger than it claimed.
+
 - **One issue per roadmap step or sub-step.** If an issue covers more, split it.
 - **Title format `<type>: <short description>`.** The `type` is lowercase and one of `feat` (new feature or capability), `fix` (bug fix), `docs` (documentation), `test` (adding or updating tests), `perf` (performance improvement) or `ci` (automation workflows). Put one space after the colon. Write the description in English, in the imperative, with no full stop, and keep the whole title around 72 characters or fewer. Good: `fix: correct recall at k calculation`. Too vague: `fix: bug`. Pull requests and commits use the same format.
 - **Sections.** The issue form asks for them:
@@ -197,7 +206,7 @@ An issue describes one piece of work before it starts. Writing it first forces a
 - **Assign yourself when you start.** An assigned issue means "someone is working on this".
 - **Mark it blocked when it is.** Add the `blocked` label and write what it is blocked by, for example another issue number or an open decision in [docs/roadmap.md](docs/roadmap.md).
 
-Open a new issue with the "New issue" button and choose the task form or the bug form.
+Open a new issue with the "New issue" button and choose the form that matches your title type. There is one for each of `feat`, `fix`, `docs`, `test`, `perf` and `ci`, and there is also a general `task` form and a `bug` form.
 
 ## 8. Labels
 
@@ -208,10 +217,11 @@ A label is a small tag on an issue or pull request. Labels make the list easy to
 | `task` | type | A planned piece of work on the benchmark |
 | `bug` | type | Something that is there but behaves wrongly |
 | `question` | type | An answer is needed before work can continue |
+| `feat`, `fix`, `docs`, `test`, `perf`, `ci` | type | The type of change, matching the prefix of the title |
 | `blocked` | status | Work cannot go on until something else is done. Say what |
 | `step-0` ... `step-8` | step | The roadmap step this belongs to, numbered as in the README |
 
-The issue forms add `task` or `bug` for you. Add the `step-N` label yourself.
+The issue forms add the type label for you. Add the `step-N` label yourself.
 
 ## 9. What never goes in the repository
 
@@ -253,7 +263,6 @@ Read the message. It tells you which rule applied. It is almost always one of th
 | What you tried | What it means | What to do |
 |---|---|---|
 | Push to `main` | "Open a pull request" | Create a branch, push it, open a pull request |
-| Push a branch with another name | The name must be `<name>/<topic>` with your own name | Create a correctly named branch and push that |
 | Merge a pull request | "You need a review" | Ask a reviewer, or ask again if you pushed after the approval |
 | Merge an approved pull request | A conversation is still open | Reply to it and resolve it |
 
